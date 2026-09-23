@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>SyncRail News • Admin Access</title>
+    <link rel="stylesheet" href="admin-login.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="bg-layer"></div>
+
+        <div class="admin-login-shell">
+            <div class="admin-card">
+
+                <div class="admin-masthead">
+                    <span class="masthead-icon">📰</span>
+                    <div class="masthead-text">
+                        <h1>SyncRail <span>Admin</span></h1>
+                        <p class="masthead-tag">Staff access only — editorial &amp; feed controls</p>
+                    </div>
+                </div>
+
+
+                <div id="loginState">
+                    <form id="adminLoginForm" novalidate>
+                        <div class="input-group">
+                            <label for="adminEmail">Admin email</label>
+                            <input type="email" id="adminEmail" required placeholder="admin@syncrail.news" autocomplete="username" />
+                        </div>
+                        <div class="input-group">
+                            <label for="adminPassword">Password</label>
+                            <input type="password" id="adminPassword" required placeholder="••••••••" autocomplete="current-password" />
+                        </div>
+                        <button type="submit" class="submit-btn" id="adminLoginBtn">
+                            <span class="btn-label">Sign In</span>
+                            <span class="btn-spinner hidden"></span>
+                        </button>
+                    </form>
+                    <p class="back-link"><a href="index.html">← Back to SyncRail News</a></p>
+                </div>
+
+
+                <div id="choiceState" class="hidden">
+                    <div class="choice-intro">
+                        <span class="role-badge">ADMIN VERIFIED</span>
+                        <h2>Welcome back, <span id="adminNameDisplay">Admin</span></h2>
+                        <p>Where would you like to go?</p>
+                    </div>
+
+                    <div class="choice-grid">
+                        <button type="button" class="choice-card" id="goToFeedBtn">
+                            <span class="choice-icon">📰</span>
+                            <span class="choice-title">Continue to News Feed</span>
+                            <span class="choice-desc">Browse SyncRail as a reader</span>
+                        </button>
+
+                        <button type="button" class="choice-card choice-card--admin" id="goToDashboardBtn">
+                            <span class="choice-icon">🛠️</span>
+                            <span class="choice-title">Continue to Admin Dashboard</span>
+                            <span class="choice-desc">Manage feeds, news &amp; sources</span>
+                        </button>
+                    </div>
+
+                    <button type="button" class="switch-account-btn" id="switchAccountBtn">Sign in with a different account</button>
+                </div>
+
+                <div id="adminAlert" class="admin-alert hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-login.js"></script>
+</body>
+</html>

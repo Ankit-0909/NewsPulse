@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>SyncRail News • Secure Portal</title>
+    <link rel="stylesheet" href="style.css" />
+<base target="_blank">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="bg-layer"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+
+
+        <div class="main-content">
+            <div class="brand-side">
+                <div class="brand-inner">
+                    <div class="brand-icon">📰</div>
+                    <h1>The Daily <span>Chronicle</span></h1>
+                    <div class="brand-divider"></div>
+                    <p class="brand-tagline">Unbiased reporting, global perspective — start your reading journey today.</p>
+                    <div class="brand-stats">
+                        <div class="stat">
+                            <span class="stat-num">2M+</span>
+                            <span class="stat-label">Readers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">150+</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="auth-wrapper">
+                <div class="auth-card">
+
+
+                    <div class="auth-header">
+                        <h2 id="formTitle">Sign In</h2>
+                        <div class="toggle-group">
+                            <button class="toggle-btn active" id="loginTab" data-form="login">Login</button>
+                            <button class="toggle-btn" id="registerTab" data-form="register">Register</button>
+                        </div>
+                    </div>
+
+
+                    <div id="loginSection">
+                        <form id="loginForm" class="auth-form" novalidate>
+                            <div class="input-group">
+                                <label>Email address</label>
+                                <input type="email" id="loginEmail" required placeholder="name@example.com" autocomplete="email" />
+                            </div>
+                            <div class="input-group">
+                                <label>Password</label>
+                                <input type="password" id="loginPassword" required placeholder="••••••••" autocomplete="current-password" />
+                            </div>
+                            <div class="form-row">
+                                <label class="remember-me">
+                                    <input type="checkbox" checked /> Remember me
+                                </label>
+                                <a href="#" id="linkToForgot" class="forgot-link">Forgot?</a>
+                            </div>
+                            <button type="submit" class="submit-btn">Sign In</button>
+                        </form>
+
+                        <div id="socialWrapper">
+                            <div class="divider"><span>or continue with</span></div>
+                            <div class="oauth-container">
+                                <a href="http://localhost:8080/oauth2/authorization/google" class="oauth-btn google-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    Google
+                                </a>
+                                <a href="http://localhost:8080/oauth2/authorization/github" class="oauth-btn github-btn">
+                                    <svg height="18" viewBox="0 0 16 16" width="18" fill="currentColor">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.54-.17-3.15-.77-3.15-3.41 0-.75.27-1.37.71-1.85-.07-.17-.31-.88.07-1.83 0 0 .58-.18 1.91.72A6.516 6.516 0 018 4c.53.01 1.07.07 1.57.21 1.33-.91 1.91-.72 1.91-.72.39.95.15 1.66.08 1.83.44.48.71 1.1.71 1.85 0 2.65-1.62 3.24-3.17 3.41.25.21.47.62.47 1.26 0 .91-.01 1.65-.01 1.87 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="switch-text">
+                            New to SyncRail? <a href="#" id="linkToRegister">Create account</a>
+                        </p>
+                    </div>
+
+
+                    <div id="registerSection" class="hidden">
+                        <form id="registerForm" class="auth-form" novalidate>
+                            <div class="input-group">
+                                <label>Full name</label>
+                                <input type="text" id="regName" required placeholder="John Doe" />
+                            </div>
+                            <div class="input-group">
+                                <label>Email address</label>
+                                <input type="email" id="regEmail" required placeholder="name@example.com" />
+                            </div>
+                            <div class="input-group">
+                                <label>Password</label>
+                                <input type="password" id="regPassword" required placeholder="Min 8 characters" minlength="8" />
+                            </div>
+                            <button type="submit" class="submit-btn register-color">Send verification OTP</button>
+                        </form>
+                        <p class="switch-text">
+                            Already registered? <a href="#" id="linkToLogin">Sign in</a>
+                        </p>
+                    </div>
+
+
+                    <div id="otpSection" class="hidden">
+                        <form id="otpForm" class="auth-form" novalidate>
+                            <h2>Verify your email</h2>
+                            <p class="otp-instruction">We sent a 4‑digit code to <strong id="targetEmailDisplay"></strong></p>
+                            <div class="input-group">
+                                <label>Enter OTP</label>
+                                <input type="text" id="otpInput" required maxlength="4" placeholder="1234" inputmode="numeric" class="otp-input" />
+                            </div>
+                            <button type="submit" class="submit-btn otp-color">Create account</button>
+                        </form>
+                        <p class="switch-text">
+                            <a href="#" id="backToRegister">← Change email</a>
+                        </p>
+                    </div>
+
+                    <div id="forgotSection" class="hidden">
+                        <form id="forgotForm" class="auth-form" novalidate>
+                            <h2>Reset password</h2>
+                            <p class="otp-instruction">Enter your email to receive a recovery code.</p>
+                            <div class="input-group">
+                                <label>Email address</label>
+                                <input type="email" id="forgotEmail" required placeholder="name@example.com" />
+                            </div>
+                            <button type="submit" class="submit-btn">Send recovery code</button>
+                        </form>
+                        <p class="switch-text">
+                            <a href="#" class="backToLoginClear">← Back to sign in</a>
+                        </p>
+                    </div>
+
+
+                    <div id="resetPasswordSection" class="hidden">
+                        <form id="resetPasswordForm" class="auth-form" novalidate>
+                            <h2>New password</h2>
+                            <p class="otp-instruction">Enter the 4‑digit code and your new password.</p>
+                            <div class="input-group">
+                                <label>OTP</label>
+                                <input type="text" id="forgotOtpInput" required maxlength="4" placeholder="1234" inputmode="numeric" class="otp-input" />
+                            </div>
+                            <div class="input-group">
+                                <label>New password</label>
+                                <input type="password" id="forgotNewPassword" required placeholder="Min 8 characters" minlength="8" />
+                            </div>
+                            <button type="submit" class="submit-btn register-color">Update password</button>
+                        </form>
+                        <p class="switch-text">
+                            <a href="#" id="backToForgotInit">← Try another email</a>
+                        </p>
+                    </div>
+
+                    <div id="authAlert" class="auth-alert hidden"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <section class="testimonials-section">
+            <div class="testimonials-header">
+                <span class="header-icon">⭐</span>
+                <h3>Reader Feedback</h3>
+                <span class="badge">10 reviews</span>
+            </div>
+
+            <div class="testimonials-scroll">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"The most balanced reporting I've seen in years. No sensationalism, just facts."</p>
+                    <div class="user">
+                        <div class="avatar gold">JD</div>
+                        <div class="info"><span class="name">James Delaney</span><span class="role" style="display: block;">Policy Analyst</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Finally a news platform that respects my time and intelligence. Global coverage unmatched."</p>
+                    <div class="user">
+                        <div class="avatar blue">SM</div>
+                        <div class="info"><span class="name">Sophia Müller</span><span class="role" style="display: block";>Journalist</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"I've been a subscriber for 3 years. The quality has only gotten better. Highly recommend."</p>
+                    <div class="user">
+                        <div class="avatar green">AK</div>
+                        <div class="info"><span class="name">Arjun Kapoor</span><span class="role" style="display: block;">Entrepreneur</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"The in-depth analysis and opinion pieces are worth the subscription alone. Brilliant."</p>
+                    <div class="user">
+                        <div class="avatar rose">EC</div>
+                        <div class="info"><span class="name">Elena Curly</span><span class="role" style="display: block;">Professor</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="quote">"Great design, great content. The daily briefings keep me ahead of the curve."</p>
+                    <div class="user">
+                        <div class="avatar purple">MR</div>
+                        <div class="info"><span class="name">Marcus Reed</span><span class="role" style="display: block;">Investor</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"The Chronicle has become my morning ritual. First thing I open with my coffee."</p>
+                    <div class="user">
+                        <div class="avatar gold">LW</div>
+                        <div class="info"><span class="name">Linda Wu</span><span class="role" style="display: block;">Designer</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Transparency and commitment to truth — a rare find in today's media landscape."</p>
+                    <div class="user">
+                        <div class="avatar blue">DR</div>
+                        <div class="info"><span class="name">David Richard</span><span class="role" style="display: block;">Lawyer</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Best decision I made was switching to SyncRail. No clickbait, just quality."</p>
+                    <div class="user">
+                        <div class="avatar green">NP</div>
+                        <div class="info"><span class="name">Nina Patel</span><span class="role" style="display: block;">Doctor</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"International coverage is superb. I feel more informed about the world than ever."</p>
+                    <div class="user">
+                        <div class="avatar rose">TO</div>
+                        <div class="info"><span class="name">Tunde Opin</span><span class="role" style="display: block;">Consultant</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"I've recommended this to all my colleagues. The most reliable news source out there."</p>
+                    <div class="user">
+                        <div class="avatar purple">HS</div>
+                        <div class="info"><span class="name">Hannah Shelby</span><span class="role" style="display: block;">Teacher</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

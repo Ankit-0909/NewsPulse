@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Chronicle — Your Intelligence Feed</title>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="site-header-sticky">
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="brand">
+                <i class="fa-solid fa-newspaper brand-icon"></i>
+                <h1>The Daily <span>Chronicle</span></h1>
+            </div>
+            
+            <div class="search-bar-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" placeholder="Search insights, sports events, tech...">
+            </div>
+
+            <div class="user-profile-zone">
+                <button id="btnSaved" class="btn-logout-client" title="Saved articles"><i class="fa-solid fa-bookmark"></i></button>
+                <button id="btnHistory" class="btn-logout-client" title="Reading history"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                <span id="userEmailDisplay" class="user-email">reader@chronicle.com</span>
+                <button id="btnLogout" class="btn-logout-client"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-navbar">
+    <div class="categories-wrapper" id="categoryPillsWrapper">
+        <button class="category-pill active" data-category="ALL">All Stories</button>
+        <button class="category-pill" id="forYouPill" data-category="FORYOU"><i class="fa-solid fa-star"></i> For You</button>
+        </div>
+</nav>
+</div>
+
+    <main class="feed-layout-container">
+        <div id="viewModeBanner" class="view-mode-banner hidden">
+            <span id="viewModeLabel"></span>
+            <button id="btnBackToFeed"><i class="fa-solid fa-arrow-left"></i> Back to feed</button>
+        </div>
+
+        <div id="feedLoader" class="loader-container hidden">
+            <div class="spinner"></div>
+            <p>Syncing latest intelligence nodes...</p>
+        </div>
+
+        <div id="newsGridWorkspace" class="news-grid-workspace">
+            </div>
+
+        <div class="pagination-panel">
+            <button id="btnPrevPage" class="pagination-btn" disabled><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <span id="pageInfoDisplay" class="page-counter-text">Page 1 of 1</span>
+            <button id="btnNextPage" class="pagination-btn" disabled>Next <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </main>
+
+    <div id="aiSummaryModal" class="summary-modal-overlay hidden">
+        <div class="summary-modal-card">
+            <div class="modal-header">
+                <div class="ai-title-group">
+                    <i class="fa-solid fa-wand-magic-sparkles ai-sparkle-icon"></i>
+                    <h2>AI Engine Executive Summary</h2>
+                </div>
+                <button id="btnCloseModal" class="btn-close-modal">&times;</button>
+            </div>
+            <div class="modal-body-content">
+                <h3 id="modalArticleTitle" class="modal-target-title">Article Title Placeholder</h3>
+                <div class="summary-meta-row">
+                    <span id="modalArticleSource" class="meta-badge"><i class="fa-solid fa-globe"></i> Source</span>
+                    <span id="modalArticleCategory" class="meta-badge category"><i class="fa-solid fa-layer-group"></i> Category</span>
+                </div>
+                <hr class="modal-divider">
+                <p id="modalAiSummaryText" class="ai-summary-text-render">
+                    Fetching generated semantic vectors...
+                </p>
+            </div>
+            <div class="modal-footer-branding">
+                <small><i class="fa-solid fa-shield-halved"></i> Powered by SyncRail Core AiSummarizationService</small>
+            </div>
+        </div>
+    </div>
+
+    <script src="feed.js"></script>
+</body>
+</html>
